@@ -1,0 +1,18 @@
+{
+  "name": "outbrain-component",
+  "version": "1.0.0",
+  "description": "outbrain component for displaying Outbrain widget in React Native apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "react-native-idfa": "^4.1.0",
+    "react-native-webview": "^7.4.3"
+  },
+  "author": "oregev@outbrain.com",
+  "license": "ISC",
+  "devDependencies": {
+    "metro-react-native-babel-preset": "^0.57.0"
+  }
+}
