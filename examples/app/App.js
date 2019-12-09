@@ -34,7 +34,8 @@ export default class App extends Component {
     super(props)
     this.state = {
       showSmartfeed: true,
-      IDFA: ''
+      showRegularWidget: true,
+      IDFA: null,
     }
   }
 
@@ -104,6 +105,13 @@ export default class App extends Component {
                \n\nThe 56-year-old said after his appointment: \"I am excited to be joining a club with such a great heritage and such passionate supporters."}
             </Text>
 
+            {this.state.showRegularWidget && this.state.IDFA &&
+              <OutbrainWidget
+                url={"http://ofirlevy1234.blogspot.com"}
+                widgetId={"MB_2"}
+                userId={this.state.IDFA}
+              />
+            }
 
             <Text style={styles.articleContent}>
               {"Jose Mourinho has agreed a deal to replace Mauricio Pochettino as Tottenham's manager until the end of the 2022/23 season.\
@@ -114,10 +122,10 @@ export default class App extends Component {
                \n\nThe 56-year-old said after his appointment: \"I am excited to be joining a club with such a great heritage and such passionate supporters."}
             </Text>
 
-            {this.state.showSmartfeed &&
+            {this.state.showSmartfeed && this.state.IDFA &&
               <OutbrainWidget
                 url={"http://ofirlevy1234.blogspot.com"}
-                widgetId={"MB_1"} // MB_1 - Smartfeed, MB_2 - regular widget
+                widgetId={"MB_1"}
                 ref={input => this.outbrainWidget = input}
                 userId={this.state.IDFA}
               />
