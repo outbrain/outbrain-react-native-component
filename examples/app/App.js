@@ -23,8 +23,8 @@ import {
 
 import { WebView } from 'react-native-webview';
 import { IDFA } from 'react-native-idfa';
+import { OutbrainWidget } from 'react-native-outbrain'
 
-import OutbrainWidget from './OutbrainWidget'
 const OutbrainHTML = require('./assets/outbrain/index.html');
 
 

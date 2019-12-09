@@ -3964,13 +3964,6 @@ osenv@^0.1.4:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.0"
 
-outbrain-component@../outbrain-component-1.0.0.tgz:
-  version "1.0.0"
-  resolved "../outbrain-component-1.0.0.tgz#14f68eb0afb19fb2d4b2fa2ca47de8d7b19110f5"
-  dependencies:
-    react-native-idfa "^4.1.0"
-    react-native-webview "^7.4.3"
-
 p-defer@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-defer/-/p-defer-1.0.0.tgz#9f6eb182f6c9aa8cd743004a7d4f96b196b0fb0c"
@@ -4245,6 +4238,13 @@ react-native-idfa@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/react-native-idfa/-/react-native-idfa-4.1.0.tgz#88d56223765054128e287d8e26c3abc04242d13b"
   integrity sha512-jxiww2T9zt5Gaj/h0CHdmXzASgz+X5WAZIoU4heX799lpT7uKBQIMGgCsaJ5iZwEEnwTSERiNropR7sOrZHkCQ==
+
+react-native-outbrain@../outbrain-component-1.0.0.tgz:
+  version "1.0.0"
+  resolved "../outbrain-component-1.0.0.tgz#14f68eb0afb19fb2d4b2fa2ca47de8d7b19110f5"
+  dependencies:
+    react-native-idfa "^4.1.0"
+    react-native-webview "^7.4.3"
 
 react-native-webview@^7.4.3:
   version "7.4.3"
