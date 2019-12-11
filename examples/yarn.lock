@@ -4246,6 +4246,14 @@ react-native-idfa@^4.1.0:
   resolved "https://registry.yarnpkg.com/react-native-idfa/-/react-native-idfa-4.1.0.tgz#88d56223765054128e287d8e26c3abc04242d13b"
   integrity sha512-jxiww2T9zt5Gaj/h0CHdmXzASgz+X5WAZIoU4heX799lpT7uKBQIMGgCsaJ5iZwEEnwTSERiNropR7sOrZHkCQ==
 
+react-native-outbrain@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-outbrain/-/react-native-outbrain-1.0.0.tgz#ade0903672e76e6c6a5777bf7aa87efa3dd0df9d"
+  integrity sha512-KDPfbEO+DRPGrvB78ra/tQko0W0o/QZ2vigKwjYN1lkNbrLydq7rvf3dYNhwhQxz9hAq93Q64nBXrn7LiiUWvA==
+  dependencies:
+    react-native-idfa "^4.1.0"
+    react-native-webview "^7.4.3"
+
 react-native-webview@^7.4.3:
   version "7.4.3"
   resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-7.4.3.tgz#e00e92e17f7389d84d09f5900652501ff2665915"

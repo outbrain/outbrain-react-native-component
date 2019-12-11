@@ -11,6 +11,7 @@
     "react": "16.8.6",
     "react-native": "0.60.4",
     "react-native-idfa": "^4.1.0",
+    "react-native-outbrain": "^1.0.0",
     "react-native-webview": "^7.4.3"
   },
   "devDependencies": {
