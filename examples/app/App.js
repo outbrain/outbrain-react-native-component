@@ -24,7 +24,7 @@ import {
 import { WebView } from 'react-native-webview';
 import { IDFA } from 'react-native-idfa';
 
-import OutbrainWidget from './OutbrainWidget'
+import { OutbrainWidget } from 'react-native-outbrain'
 const OutbrainHTML = require('./assets/outbrain/index.html');
 
 
@@ -63,7 +63,7 @@ export default class App extends Component {
             style={styles.container}
             showsVerticalScrollIndicator={false}
             onMomentumScrollEnd={({nativeEvent}) => {
-              if (this.isCloseToBottom(nativeEvent)) {
+              if (this.outbrainWidget && this.isCloseToBottom(nativeEvent)) {
                 console.log("onMomentumScrollEnd - isCloseToBottom")
                 this.outbrainWidget.loadMore()
               }
