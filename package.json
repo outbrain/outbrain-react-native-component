@@ -1,5 +1,5 @@
 {
-  "name": "outbrain-component",
+  "name": "react-native-outbrain",
   "version": "1.0.0",
   "description": "outbrain component for displaying Outbrain widget in React Native apps",
   "main": "index.js",
