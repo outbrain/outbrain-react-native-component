@@ -18,13 +18,13 @@ or using yarn:
 yarn add react-native-outbrain
 ```
 
-## Widget Configuration (AMPM)
+## Widget Settings (AMPM)
 
-### Settings
+### Custom Clicks Handler (982) = enable
+Must be set so all click will be passed to the native function. if a feed is in use then change this setting to all the feed child widgets
 
-_Custom Clicks Handler (982)_ = enable Must be set so all click will be passed to the native function. if a feed is in use then change this setting to all the feed child widgets
-
-_Feed Manual Chunk Fetch (919)_ = enable On ReactNative the native scroll will not work, managing the fetching of next cards is done from the app.
+### Feed Manual Chunk Fetch (919) = enable 
+On ReactNative the native scroll will not work, managing the fetching of next cards is done from the app.
 
 In general please refer to this [Outbrain Confluence page](https://confluence.outbrain.com/display/CATS/React+Native+Bridge+project)
 
