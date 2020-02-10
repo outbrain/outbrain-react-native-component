@@ -37,7 +37,7 @@ In general please refer to this [Outbrain Confluence page](https://confluence.ou
 import { OutbrainWidget } from 'react-native-outbrain'
 ```
 
-### Example for displayinga a regular widget
+### Example for displaying a regular widget
 
 ```
 <OutbrainWidget
@@ -47,7 +47,7 @@ import { OutbrainWidget } from 'react-native-outbrain'
 />
 ```
 
-### Example for displayinga a Smartfeed widget
+### Example for displaying a Smartfeed widget
 
 ```
 <OutbrainWidget
