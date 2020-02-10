@@ -4,6 +4,7 @@ import { WebView } from 'react-native-webview';
 import PropTypes from 'prop-types'
 
 const outbrainWidgetURL = "https://widgets.outbrain.com/reactNativeBridge/index.html"
+const webViewInitialHeight = 100
 
 export default class OutbrainWidget extends Component {
   static propTypes = {
@@ -20,7 +21,7 @@ export default class OutbrainWidget extends Component {
     this.loadMore = this.loadMore.bind(this)
     this._buildWidgetURL = this._buildWidgetURL.bind(this)
     this.state = {
-      webViewHeight: 1,
+      webViewHeight: webViewInitialHeight,
     }
   }
 
@@ -39,7 +40,7 @@ export default class OutbrainWidget extends Component {
     console.log("onMessage: " + event.nativeEvent.data)
     let result = JSON.parse(event.nativeEvent.data)
     if (result.height) {
-      this.setState({ webViewHeight: result.height })
+      this.setState({ webViewHeight: result.height+20 })
     }
     if (result.url) {
       Linking.canOpenURL(result.url).then(supported => {
@@ -64,7 +65,7 @@ export default class OutbrainWidget extends Component {
   render() {
     const widgetUrl = this._buildWidgetURL()
     const screenWidth = Math.round(Dimensions.get('window').width);
-    console.log("OutbrainWidget loading: " + widgetUrl)
+    console.log("OutbrainWidget rendering: " + widgetUrl)
     return (
       <WebView
         source={{uri: widgetUrl}}
@@ -80,7 +81,7 @@ export default class OutbrainWidget extends Component {
           }, 200)`
         }
         onMessage={this._onWebViewMessage}
-        style={[styles.webView, this.props.style, {height: this.state.webViewHeight, width: screenWidth*0.9}]}
+        style={[styles.webView, {height: this.state.webViewHeight, width: screenWidth}, this.props.style]}
       />
     )
   }
@@ -90,5 +91,6 @@ const styles = StyleSheet.create({
   webView: {
     flex: 0,
     marginTop: 20,
+    alignSelf: 'center'
   }
 });
