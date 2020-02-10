@@ -29,6 +29,13 @@ On ReactNative the native scroll will not work, managing the fetching of next ca
 In general please refer to this [Outbrain Confluence page](https://confluence.outbrain.com/display/CATS/React+Native+Bridge+project)
 
 
+## Example Apps - Download Links
+
+[iOS Demo download link](https://install.appcenter.ms/users/oregev/apps/react-native-ios-demo/distribution_groups/public)
+
+[Android Demo download link](https://install.appcenter.ms/users/oregev/apps/react-native-android-demo/distribution_groups/public)
+
+
 ## Usage
 
 ### Import Outbrain Module
