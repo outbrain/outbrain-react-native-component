@@ -10,7 +10,7 @@
     "@react-native-community/masked-view": "^0.1.6",
     "@react-navigation/native": "^5.0.0",
     "@react-navigation/stack": "^5.0.0",
-    "outbrain-component": "../outbrain-component-1.0.0.tgz",
+    "react-native-outbrain": "1.0.1",
     "react": "16.8.6",
     "react-native": "0.60.4",
     "react-native-gesture-handler": "^1.5.6",
