@@ -80,7 +80,7 @@ export default class OutbrainWidget extends Component {
           }, 200)`
         }
         onMessage={this._onWebViewMessage}
-        style={[styles.webView, this.props.style, {height: this.state.webViewHeight, width: screenWidth*0.9}]}
+        style={[styles.webView, {height: this.state.webViewHeight, width: screenWidth}, this.props.style]}
       />
     )
   }
@@ -90,5 +90,6 @@ const styles = StyleSheet.create({
   webView: {
     flex: 0,
     marginTop: 20,
+    alignSelf: 'center'
   }
 });
