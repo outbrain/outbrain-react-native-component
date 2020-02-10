@@ -34,7 +34,7 @@ export default class App extends Component {
     super(props)
     this.state = {
       showSmartfeed: true,
-      showRegularWidget: true,
+      showRegularWidget: false,
       IDFA: null,
     }
   }
@@ -60,7 +60,6 @@ export default class App extends Component {
         <StatusBar barStyle="dark-content" />
         <SafeAreaView style={{flex: 1}}>
           <ScrollView
-            style={styles.container}
             showsVerticalScrollIndicator={false}
             onMomentumScrollEnd={({nativeEvent}) => {
               if (this.outbrainWidget && this.isCloseToBottom(nativeEvent)) {
@@ -68,69 +67,71 @@ export default class App extends Component {
                 this.outbrainWidget.loadMore()
               }
             }}>
+            <View style={styles.container}>
 
-            <Text style={styles.articleTitle}>
-              {"Jose Mourinho agrees deal to replace Mauricio Pochettino as Tottenham manager"}
-            </Text>
-            <Text style={styles.articleSubtitle}>
-              {"The Portuguese boss had been out of work since being sacked by Manchester United in December 2018."}
-            </Text>
-            <View style={styles.articleAuthorContainer}>
+              <Text style={styles.articleTitle}>
+                {"Jose Mourinho agrees deal to replace Mauricio Pochettino as Tottenham manager"}
+              </Text>
+              <Text style={styles.articleSubtitle}>
+                {"The Portuguese boss had been out of work since being sacked by Manchester United in December 2018."}
+              </Text>
+              <View style={styles.articleAuthorContainer}>
+                <Image
+                  style={{width: 65, height: 65, borderRadius: 32}}
+                  source={require('./assets/Images/skynews-tom-gillespie-news-reporter_4616217.jpg')} />
+                  <View style={{marginLeft: 15, marginTop: 5, alignSelf: 'flex-start'}}>
+                    <Text style={styles.authorName}>
+                      {"Tom Gillepie"}
+                    </Text>
+                    <Text style={styles.authorDescription}>
+                      {"News reporter @TomGillespie1"}
+                    </Text>
+                  </View>
+              </View>
+              <Text style={styles.articleDatetime}>
+                {"Wednesday 20 November 2019 12:12, UK"}
+              </Text>
+
               <Image
-                style={{width: 65, height: 65, borderRadius: 32}}
-                source={require('./assets/Images/skynews-tom-gillespie-news-reporter_4616217.jpg')} />
-                <View style={{marginLeft: 15, marginTop: 5, alignSelf: 'flex-start'}}>
-                  <Text style={styles.authorName}>
-                    {"Tom Gillepie"}
-                  </Text>
-                  <Text style={styles.authorDescription}>
-                    {"News reporter @TomGillespie1"}
-                  </Text>
-                </View>
+                style={{height: 250, marginLeft: -20, width: screenWidth, marginTop: 10, resizeMode: 'contain'}}
+                source={require('./assets/Images/skynews-jose-mourinho_4841610.jpg')} />
+
+              <Text style={styles.articleContent}>
+                {"Jose Mourinho has agreed a deal to replace Mauricio Pochettino as Tottenham's manager until the end of the 2022/23 season.\
+                \n\nPochettino was sacked last night after five-and-a-half years in charge, and less than six months after leading Spurs to their\
+                 first ever Champions League final.\
+                 \n\nNegotiations between the London side and Mourinho's representatives intensified over the last few days, with talks continuing into Tuesday night.\
+                 \n\nThe Portuguese boss had been out of work since being sacked by Manchester United in December 2018.\
+                 \n\nThe 56-year-old said after his appointment: \"I am excited to be joining a club with such a great heritage and such passionate supporters."}
+              </Text>
+
+              {this.state.showRegularWidget && this.state.IDFA &&
+                <OutbrainWidget
+                  url={"http://ofirlevy1234.blogspot.com"}
+                  widgetId={"MB_2"}
+                  userId={this.state.IDFA}
+                />
+              }
+
+              <Text style={styles.articleContent}>
+                {"Jose Mourinho has agreed a deal to replace Mauricio Pochettino as Tottenham's manager until the end of the 2022/23 season.\
+                \n\nPochettino was sacked last night after five-and-a-half years in charge, and less than six months after leading Spurs to their\
+                 first ever Champions League final.\
+                 \n\nNegotiations between the London side and Mourinho's representatives intensified over the last few days, with talks continuing into Tuesday night.\
+                 \n\nThe Portuguese boss had been out of work since being sacked by Manchester United in December 2018.\
+                 \n\nThe 56-year-old said after his appointment: \"I am excited to be joining a club with such a great heritage and such passionate supporters."}
+              </Text>
             </View>
-            <Text style={styles.articleDatetime}>
-              {"Wednesday 20 November 2019 12:12, UK"}
-            </Text>
-
-            <Image
-              style={{height: 250, marginLeft: -20, width: screenWidth, marginTop: 10, resizeMode: 'contain'}}
-              source={require('./assets/Images/skynews-jose-mourinho_4841610.jpg')} />
-
-            <Text style={styles.articleContent}>
-              {"Jose Mourinho has agreed a deal to replace Mauricio Pochettino as Tottenham's manager until the end of the 2022/23 season.\
-              \n\nPochettino was sacked last night after five-and-a-half years in charge, and less than six months after leading Spurs to their\
-               first ever Champions League final.\
-               \n\nNegotiations between the London side and Mourinho's representatives intensified over the last few days, with talks continuing into Tuesday night.\
-               \n\nThe Portuguese boss had been out of work since being sacked by Manchester United in December 2018.\
-               \n\nThe 56-year-old said after his appointment: \"I am excited to be joining a club with such a great heritage and such passionate supporters."}
-            </Text>
-
-            {this.state.showRegularWidget && this.state.IDFA &&
-              <OutbrainWidget
-                url={"http://ofirlevy1234.blogspot.com"}
-                widgetId={"MB_2"}
-                userId={this.state.IDFA}
-              />
-            }
-
-            <Text style={styles.articleContent}>
-              {"Jose Mourinho has agreed a deal to replace Mauricio Pochettino as Tottenham's manager until the end of the 2022/23 season.\
-              \n\nPochettino was sacked last night after five-and-a-half years in charge, and less than six months after leading Spurs to their\
-               first ever Champions League final.\
-               \n\nNegotiations between the London side and Mourinho's representatives intensified over the last few days, with talks continuing into Tuesday night.\
-               \n\nThe Portuguese boss had been out of work since being sacked by Manchester United in December 2018.\
-               \n\nThe 56-year-old said after his appointment: \"I am excited to be joining a club with such a great heritage and such passionate supporters."}
-            </Text>
 
             {this.state.showSmartfeed && this.state.IDFA &&
               <OutbrainWidget
                 url={"http://ofirlevy1234.blogspot.com"}
                 widgetId={"MB_1"}
+                style={{width: screenWidth*1}}
                 ref={input => this.outbrainWidget = input}
                 userId={this.state.IDFA}
               />
             }
-
 
           </ScrollView>
         </SafeAreaView>
