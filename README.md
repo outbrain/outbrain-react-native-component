@@ -1,6 +1,6 @@
 # Outbrain React Native Demo
 
-Use the tutorial on https://www.freecodecamp.org/news/how-to-publish-a-react-native-component-to-npm-its-easier-than-you-think-51f6ae1ef850/
+Project used [this tutorial](https://www.freecodecamp.org/news/how-to-publish-a-react-native-component-to-npm-its-easier-than-you-think-51f6ae1ef850/) for referene.
 
 use `npm pack` to test locally
 
@@ -17,6 +17,17 @@ or using yarn:
 ```shell
 yarn add react-native-outbrain
 ```
+
+## Widget Configuration (AMPM)
+
+### Settings
+
+Custom Clicks Handler (982) = enable Must be set so all click will be passed to the native function. if a feed is in use then change this setting to all the feed child widgets
+
+Feed Manual Chunk Fetch (919) = enable On ReactNative the native scroll will not work, managing the fetching of next cards is done from the app.
+
+in general please refer to this [Outbrain Confluence page](https://confluence.outbrain.com/display/CATS/React+Native+Bridge+project)
+
 
 ## Usage
 
