@@ -50,7 +50,7 @@ import { OutbrainWidget } from 'react-native-outbrain'
 <OutbrainWidget
   url={"http://ofirlevy1234.blogspot.com"}
   widgetId={"MB_2"}
-  installationKey={"iOSSampleApp2014"}
+  installationKey={"NANOWDGTLT13"}
   userId={this.state.IDFA}
 />
 ```
@@ -61,6 +61,7 @@ import { OutbrainWidget } from 'react-native-outbrain'
 <OutbrainWidget
   url={"http://ofirlevy1234.blogspot.com"}
   widgetId={"MB_1"}
+  installationKey={"NANOWDGTLT13"}
   ref={input => this.outbrainWidget = input}
   userId={this.state.IDFA}
 />
