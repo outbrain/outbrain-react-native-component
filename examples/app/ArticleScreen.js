@@ -109,6 +109,7 @@ export default class ArticleScreen extends Component {
                 <OutbrainWidget
                   url={"http://ofirlevy1234.blogspot.com"}
                   widgetId={"MB_2"}
+                  installationKey={"NANOWDGT01"}
                   userId={this.state.IDFA}
                   style={{ width: screenWidth*0.9}}
                 />
@@ -128,6 +129,7 @@ export default class ArticleScreen extends Component {
               <OutbrainWidget
                 url={"http://ofirlevy1234.blogspot.com"}
                 widgetId={"MB_1"}
+                installationKey={"NANOWDGT01"}
                 style={{width: screenWidth*1}}
                 ref={input => this.outbrainWidget = input}
                 userId={this.state.IDFA}

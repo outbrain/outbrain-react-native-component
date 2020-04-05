@@ -59,6 +59,9 @@ export default class OutbrainWidget extends Component {
     if (this.props.userId) {
       url = url + `&userId=${this.props.userId}`
     }
+    if (this.props.installationKey) {
+      url = url + `&installationKey=${this.props.installationKey}`
+    }
     return url
   }
 
