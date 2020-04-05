@@ -50,6 +50,7 @@ import { OutbrainWidget } from 'react-native-outbrain'
 <OutbrainWidget
   url={"http://ofirlevy1234.blogspot.com"}
   widgetId={"MB_2"}
+  installationKey={"iOSSampleApp2014"}
   userId={this.state.IDFA}
 />
 ```
