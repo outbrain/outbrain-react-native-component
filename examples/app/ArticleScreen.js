@@ -107,7 +107,7 @@ export default class ArticleScreen extends Component {
 
               {this.state.showRegularWidget && this.state.IDFA &&
                 <OutbrainWidget
-                  url={"http://ofirlevy1234.blogspot.com"}
+                  url={"http://mobile-demo.outbrain.com"}
                   widgetId={"MB_2"}
                   installationKey={"NANOWDGT01"}
                   userId={this.state.IDFA}
@@ -127,7 +127,7 @@ export default class ArticleScreen extends Component {
 
             {this.state.showSmartfeed && this.state.IDFA &&
               <OutbrainWidget
-                url={"http://ofirlevy1234.blogspot.com"}
+                url={"http://mobile-demo.outbrain.com"}
                 widgetId={"MB_1"}
                 installationKey={"NANOWDGT01"}
                 style={{width: screenWidth*1}}

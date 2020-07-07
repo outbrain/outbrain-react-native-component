@@ -20,6 +20,7 @@ export default class OutbrainWidget extends Component {
     this._onWebViewMessage = this._onWebViewMessage.bind(this)
     this.loadMore = this.loadMore.bind(this)
     this._buildWidgetURL = this._buildWidgetURL.bind(this)
+    this.__onOrganicClickWithListener = this._onOrganicClickWithListener.bind(this)
     this.state = {
       webViewHeight: webViewInitialHeight,
     }
@@ -42,14 +43,40 @@ export default class OutbrainWidget extends Component {
     if (result.height) {
       this.setState({ webViewHeight: result.height+20 })
     }
-    if (result.url) {
-      Linking.canOpenURL(result.url).then(supported => {
-        if (supported) {
-          Linking.openURL(result.url);
-        }
-      })
+    if (result.url) { // click on rec
+      if (result.type === 'organic-rec' && this.props.onOrganicClick) {
+        this._onOrganicClickWithListener(result.orgUrl, result.url)
+      }
+      else {
+          // Navigate to external browser
+          Linking.canOpenURL(result.url).then(supported => {
+            if (supported) {
+              Linking.openURL(result.url);
+            }
+          })
+      }
     }
   }
+
+  _onOrganicClickWithListener(orgUrl, recUrl) {
+    // report Outbrain backend for organic click with sending traffic.outbrain url..
+    let trafficUrl = recUrl + '&noRedirect=true'
+    if (this.isValidURL(trafficUrl)) {
+      console.log("calling GET - " + trafficUrl)
+      fetch(trafficUrl)
+      .then((response) => console.log("report organic click response status: " + response.status))
+      .catch((error) => {
+        console.error('Error reporting organic click: ' + trafficUrl + ', error: ' + error);
+      });
+    }
+    // notify app developer on original url
+    this.props.onOrganicClick(orgUrl)
+  }
+
+  isValidURL(string) {
+    let res = string.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+    return (res !== null)
+  };
 
   _buildWidgetURL() {
     if (!this.props.url || !this.props.widgetId) {

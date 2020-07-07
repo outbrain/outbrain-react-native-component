@@ -23,7 +23,7 @@ yarn add react-native-outbrain
 ### Custom Clicks Handler (982) = enable
 Must be set so all click will be passed to the native function. if a feed is in use then change this setting to all the feed child widgets
 
-### Feed Manual Chunk Fetch (919) = enable 
+### Feed Manual Chunk Fetch (919) = enable
 On ReactNative the native scroll will not work, managing the fetching of next cards is done from the app.
 
 In general please refer to this [Outbrain Confluence page](https://confluence.outbrain.com/display/CATS/React+Native+Bridge+project)
@@ -101,6 +101,26 @@ componentDidMount() {
 }
 ```
 
+### Example for organic click custom listener
+
+```
+<OutbrainWidget
+  url={"http://mobile-demo.outbrain.com"}
+  widgetId={"MB_1"}
+  installationKey={"NANOWDGT01"}
+  onOrganicClick={orgUrl => console.log("In App - click on: " + orgUrl)}
+  style={{width: screenWidth*1}}
+  ref={input => this.outbrainWidget = input}
+  userId={this.state.IDFA}
+/>
+```
+
+
+### Test a new version
+
+1. update version in package.json
+2. run `npm pack` --> creates `eact-native-outbrain-1.0.3.tgz` for example.
+3. in /examples `yarn add ../react-native-outbrain-1.0.3.tgz`
 
 ### Release a new version
 
