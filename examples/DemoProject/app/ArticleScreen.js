@@ -5,7 +5,7 @@
  * @format
  * @flow strict-local
  */
- 
+
 import PropTypes from 'prop-types'
 import React, {Fragment, Component} from 'react';
 import {
@@ -21,11 +21,9 @@ import {
   StatusBar,
 } from 'react-native';
 
-import { WebView } from 'react-native-webview';
 import { IDFA } from 'react-native-idfa';
 
 import { OutbrainWidget } from 'react-native-outbrain'
-const OutbrainHTML = require('./assets/outbrain/index.html');
 
 
 export default class ArticleScreen extends Component {
@@ -35,13 +33,13 @@ export default class ArticleScreen extends Component {
     this.state = {
       showSmartfeed: props.route.params.isSmartfeed,
       showRegularWidget: props.route.params.isRegularWidget,
-      IDFA: null,
+      deviceIDFA: null,
     }
   }
 
   componentDidMount() {
     IDFA.getIDFA().then((idfa) => {
-      this.setState({ IDFA: idfa, });
+      this.setState({ deviceIDFA: idfa.length > 0 ? idfa : null });
     })
     .catch((e) => {
       console.error(e);
@@ -105,7 +103,7 @@ export default class ArticleScreen extends Component {
                  \n\nThe 56-year-old said after his appointment: \"I am excited to be joining a club with such a great heritage and such passionate supporters."}
               </Text>
 
-              {this.state.showRegularWidget && this.state.IDFA &&
+              {this.state.showRegularWidget &&
                 <OutbrainWidget
                   url={"http://mobile-demo.outbrain.com"}
                   widgetId={"MB_2"}
@@ -125,7 +123,7 @@ export default class ArticleScreen extends Component {
               </Text>
             </View>
 
-            {this.state.showSmartfeed && this.state.IDFA &&
+            {this.state.showSmartfeed &&
               <OutbrainWidget
                 url={"http://mobile-demo.outbrain.com"}
                 widgetId={"MB_1"}
