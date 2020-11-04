@@ -1,4 +1,4 @@
-package com.demoproject;
+package com.outbrain.demoproject;
 
 import android.app.Application;
 import android.content.Context;
