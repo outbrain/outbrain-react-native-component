@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "react-native-idfa": "^4.1.0",
-    "react-native-webview": "^7.4.3"
+    "react-native-webview": "^10.10.0"
   },
   "author": "oregev@outbrain.com",
   "license": "ISC",
