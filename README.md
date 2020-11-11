@@ -4,6 +4,8 @@ Project used [this tutorial](https://www.freecodecamp.org/news/how-to-publish-a-
 
 use `npm pack` to test locally
 
+See the [Release Notes](release-notes.md) for the latest version details.
+
 ## Installation
 
 Using npm:
