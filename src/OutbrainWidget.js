@@ -48,12 +48,7 @@ export default class OutbrainWidget extends Component {
         this._onOrganicClickWithListener(result.orgUrl, result.url)
       }
       else {
-          // Navigate to external browser
-          Linking.canOpenURL(result.url).then(supported => {
-            if (supported) {
-              Linking.openURL(result.url);
-            }
-          })
+        Linking.openURL(result.url);
       }
     }
   }
