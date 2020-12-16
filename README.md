@@ -118,6 +118,10 @@ componentDidMount() {
 ```
 
 
+### Development Setup
+
+Edit package.json with `"react-native-outbrain": "../../"`
+
 ### Test a new version
 
 1. update version in package.json
