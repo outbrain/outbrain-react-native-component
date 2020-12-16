@@ -69,7 +69,7 @@ import { OutbrainWidget } from 'react-native-outbrain'
 />
 ```
 
-#### Example for detect scroll to bottom
+### Example for detect scroll to bottom
 
 ```
 isCloseToBottom ({layoutMeasurement, contentOffset, contentSize}) {
@@ -86,6 +86,29 @@ isCloseToBottom ({layoutMeasurement, contentOffset, contentSize}) {
       this.outbrainWidget.loadMore()
     }
   }}>
+```
+
+### GDPR \ CCPA Support
+
+Use the following props to pass `OutbrainWidget` the GDPR or CCPA string from your app code.
+
+For GDPR consent V1 use `consentV1`
+For GDPR consent V2 use `consentV2`
+For CCPA string use `ccpaString`
+
+
+```
+<OutbrainWidget
+                url={"http://mobile-demo.outbrain.com"}
+                widgetId={"MB_1"}
+                installationKey={"NANOWDGT01"}
+                consentV1={"1111111"}
+                consentV2={"2222222"}
+                ccpaString={"3333333"}
+                style={{width: screenWidth*1}}
+                ref={input => this.outbrainWidget = input}
+                userId={this.state.IDFA}
+              />
 ```
 
 ### Example for getting IDFA
