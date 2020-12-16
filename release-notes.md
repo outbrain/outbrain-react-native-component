@@ -1,5 +1,9 @@
 # outbrain-react-native module - Release Notes
 
+## v1.2.0 - Dec 16, 2020
+
+- Feature: support GDPR, CCPA string - pass as props to `OutbrainWidget`
+
 ## v1.1.0 - Nov 4, 2020
 
 - Infrastructure - update to React Native 0.63.3 (was 0.60.0)
