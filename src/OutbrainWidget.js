@@ -11,6 +11,9 @@ export default class OutbrainWidget extends Component {
     url: PropTypes.string,
     widgetId: PropTypes.string,
     userId: PropTypes.string,
+    consentV1: PropTypes.string,
+    consentV2: PropTypes.string,
+    ccpaString: PropTypes.string,
     idx: PropTypes.number,
     style: PropTypes.object
   }
@@ -83,6 +86,15 @@ export default class OutbrainWidget extends Component {
     }
     if (this.props.installationKey) {
       url = url + `&installationKey=${this.props.installationKey}`
+    }
+    if (this.props.consentV1) {
+      url = url + `&cnsnt=${this.props.consentV1}`
+    }
+    if (this.props.consentV2) {
+      url = url + `&cnsntv2=${this.props.consentV2}`
+    }
+    if (this.props.ccpaString) {
+      url = url + `&ccpa=${this.props.ccpaString}`
     }
     return url
   }

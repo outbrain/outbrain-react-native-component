@@ -1,5 +1,11 @@
 # outbrain-react-native module - Release Notes
 
+## v1.2.0 - Dec 16, 2020
+
+- Feature: support GDPR, CCPA string - pass as props to `OutbrainWidget`
+- Fix dependency react-native-webview error if included twice in a project [#8](https://github.com/outbrain/outbrain-react-native-component/pull/8)
+- Bump react-native-webview from 10.10.0 to 11.0.0
+
 ## v1.1.0 - Nov 4, 2020
 
 - Infrastructure - update to React Native 0.63.3 (was 0.60.0)
