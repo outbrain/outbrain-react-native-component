@@ -10,4 +10,4 @@ dist
 # Dependency directory
 node_modules
 /examples/ios/Pods/
-outbrain-component-1.0.0.tgz
+*.tgz
