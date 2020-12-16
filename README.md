@@ -149,7 +149,7 @@ Edit package.json with `"react-native-outbrain": "../../"`
 
 1. update version in package.json
 2. run `npm pack` --> creates `eact-native-outbrain-1.0.3.tgz` for example.
-3. in /examples `yarn add ../react-native-outbrain-1.0.3.tgz`
+3. in /examples/examples/DemoProject `yarn add ../../react-native-outbrain-1.0.3.tgz`
 
 ### Release a new version
 
