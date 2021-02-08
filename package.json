@@ -1,6 +1,6 @@
 {
   "name": "react-native-outbrain",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "outbrain component for displaying Outbrain widget in React Native apps",
   "main": "index.js",
   "scripts": {
