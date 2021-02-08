@@ -107,6 +107,7 @@ export default class OutbrainWidget extends Component {
       <WebView
         source={{uri: widgetUrl}}
         cacheEnabled={false}
+        mediaPlaybackRequiresUserAction={true}
         ref={input => this.webview = input}
         scrollEnabled={false}
         injectedJavaScript={
