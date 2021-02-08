@@ -1,5 +1,9 @@
 # outbrain-react-native module - Release Notes
 
+## v1.2.1 - Feb 8, 2021
+
+- Fix: Video autoplay on iOS opens in full screen instead of inline.
+
 ## v1.2.0 - Dec 16, 2020
 
 - Feature: support GDPR, CCPA string - pass as props to `OutbrainWidget`
