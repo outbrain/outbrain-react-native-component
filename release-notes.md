@@ -1,5 +1,11 @@
 # outbrain-react-native module - Release Notes
 
+## v1.3.0 - June 14, 2021
+
+- Added a new prop for `OutbrainWidget` - `webViewHeightPadding` following a request from publisher.
+- Fixed issue with flipper and Xcode 12.5 - [see reference](https://stackoverflow.com/questions/66189325/xcode-throws-atomic-notify-oneunsigned-long-is-unavailable)
+
+
 ## v1.2.1 - Feb 8, 2021
 
 - Fix: Video autoplay on iOS opens in full screen instead of inline.
