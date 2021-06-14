@@ -15,7 +15,12 @@ export default class OutbrainWidget extends Component {
     consentV2: PropTypes.string,
     ccpaString: PropTypes.string,
     idx: PropTypes.number,
+    webViewHeightPadding: PropTypes.number,
     style: PropTypes.object
+  }
+
+  static defaultProps = {
+    webViewHeightPadding: 20
   }
 
   constructor (props) {
@@ -44,7 +49,7 @@ export default class OutbrainWidget extends Component {
     console.log("onMessage: " + event.nativeEvent.data)
     let result = JSON.parse(event.nativeEvent.data)
     if (result.height) {
-      this.setState({ webViewHeight: result.height+20 })
+      this.setState({ webViewHeight: result.height + this.props.webViewHeightPadding })
     }
     if (result.url) { // click on rec
       if (result.type === 'organic-rec' && this.props.onOrganicClick) {
