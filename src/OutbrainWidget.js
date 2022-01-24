@@ -16,6 +16,7 @@ export default class OutbrainWidget extends Component {
     ccpaString: PropTypes.string,
     idx: PropTypes.number,
     webViewHeightPadding: PropTypes.number,
+    darkMode: PropTypes.bool,
     style: PropTypes.object
   }
 
@@ -87,19 +88,22 @@ export default class OutbrainWidget extends Component {
     }
     let url = `${outbrainWidgetURL}?permalink=${this.props.url}&widgetId=${this.props.widgetId}`
     if (this.props.userId) {
-      url = url + `&userId=${this.props.userId}`
+      url += `&userId=${this.props.userId}`
     }
     if (this.props.installationKey) {
-      url = url + `&installationKey=${this.props.installationKey}`
+      url += `&installationKey=${this.props.installationKey}`
     }
     if (this.props.consentV1) {
-      url = url + `&cnsnt=${this.props.consentV1}`
+      url += `&cnsnt=${this.props.consentV1}`
     }
     if (this.props.consentV2) {
-      url = url + `&cnsntv2=${this.props.consentV2}`
+      url += `&cnsntv2=${this.props.consentV2}`
     }
     if (this.props.ccpaString) {
-      url = url + `&ccpa=${this.props.ccpaString}`
+      url += `&ccpa=${this.props.ccpaString}`
+    }
+    if (this.props.darkMode) {
+      url += `&darkMode=true`
     }
     return url
   }
