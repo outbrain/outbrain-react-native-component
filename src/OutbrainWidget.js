@@ -124,11 +124,11 @@ export default class OutbrainWidget extends Component {
           }, 200)`
         }
         onMessage={this._onWebViewMessage}
-        style={[styles.webView, this.props.style, {
+        style={[styles.webView, {
           height: this.state.webViewHeight,
           width: screenWidth,
           backgroundColor:'transparent'
-        }]}
+        }, this.props.style]}
       />
     )
   }
