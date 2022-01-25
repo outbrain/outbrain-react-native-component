@@ -1,5 +1,10 @@
 # outbrain-react-native module - Release Notes
 
+## v1.3.1 - Jan 25, 2022
+
+- Dark mode support - new prop for `OutbrainWidget` - `darkMode`.
+- Change default background of `OutbrainWidget` to transparent.
+
 ## v1.3.0 - June 14, 2021
 
 - Added a new prop for `OutbrainWidget` - `webViewHeightPadding` following a request from publisher.
