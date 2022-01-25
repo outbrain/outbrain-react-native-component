@@ -140,6 +140,22 @@ componentDidMount() {
 />
 ```
 
+### Dark mode support
+
+To enable dark mode, set `darkMode` in props to true.
+
+```
+<OutbrainWidget
+  url={"http://mobile-demo.outbrain.com"}
+  widgetId={"MB_1"}
+  installationKey={"NANOWDGT01"}
+  onOrganicClick={orgUrl => console.log("In App - click on: " + orgUrl)}
+  style={{width: screenWidth*1}}
+  ref={input => this.outbrainWidget = input}
+  userId={this.state.IDFA}
+  darkMode={true}
+/>
+```
 
 ### Development Setup
 
