@@ -5739,10 +5739,10 @@ react-native-iphone-x-helper@^1.3.0:
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.3.0.tgz#84fd13e6b89cc3aa4daa80ec514bf15cb724d86d"
   integrity sha512-+/bcZWFeZt0xSS/+3CHM5K7qPL4vDO/3ARLIowzFpUPGZiPsv9+NET+XNqqseRYwFJwYMmtX+Q4TZKxAVy09ew==
 
-react-native-outbrain@1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/react-native-outbrain/-/react-native-outbrain-1.3.1.tgz#cd9da1dfefc770923e8794b923f6be26cf139f0b"
-  integrity sha512-+TKjbFfXnju6qbM7hBH9SNAeM686BVXEPpXr4sPq19ToDNRaIN9sRLWL6gS7jGFog+Lf1F13OtD2mUibNh3zZg==
+react-native-outbrain@1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/react-native-outbrain/-/react-native-outbrain-1.4.0.tgz#286852f15e578409b6e49b2325e931f144973221"
+  integrity sha512-aDpeuqs3XBvs7sWSxUV4bR9/wZvd850G6saEJArHquEEoxk+SXJXcyOG/XyHWfoRWtnzcRbhBmUapOCD/7+05A==
 
 react-native-reanimated@^1.13.1:
   version "1.13.1"
