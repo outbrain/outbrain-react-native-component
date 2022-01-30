@@ -116,6 +116,7 @@ export default class OutbrainWidget extends Component {
       <WebView
         source={{uri: widgetUrl}}
         cacheEnabled={false}
+        overScrollMode="never"
         mediaPlaybackRequiresUserAction={true}
         ref={input => this.webview = input}
         scrollEnabled={false}
@@ -131,6 +132,7 @@ export default class OutbrainWidget extends Component {
         style={[styles.webView, {
           height: this.state.webViewHeight,
           width: screenWidth,
+          opacity: 0.99,
           backgroundColor:'transparent'
         }, this.props.style]}
       />
