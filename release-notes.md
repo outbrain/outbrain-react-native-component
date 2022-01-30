@@ -1,5 +1,9 @@
 # outbrain-react-native module - Release Notes
 
+## v1.4.0 - Jan 30, 2022
+
+- Fix crash on Android 11+ with react-native-webview
+
 ## v1.3.1 - Jan 25, 2022
 
 - Dark mode support - new prop for `OutbrainWidget` - `darkMode`.
